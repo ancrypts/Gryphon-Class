@@ -1,25 +1,23 @@
-# 🔥 MakaBhosraAAG - Weather App
+# MakaBhosraAAG - Weather App
 
 A simple and responsive weather application built with **Python**, **Streamlit**, and the **OpenWeatherMap API**.
 
 Users can enter any city name and instantly view its current weather information including:
 
-- 🌡️ Temperature
-- 💧 Humidity
-- 🌬️ Wind Speed
-- ☁️ Weather Condition
+- Temperature
+- Humidity
+- Wind Speed
+- Weather Condition
 
 ---
 
-## 📷 Preview
+## Preview
 
-<img width="900" alt="Weather App Preview" src="https://placehold.co/900x450?text=Add+Your+Screenshot+Here">
-
-> Replace the image above with a screenshot of your application.
+> Add a screenshot of your application here.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Search weather by city name
 - Displays:
@@ -27,13 +25,13 @@ Users can enter any city name and instantly view its current weather information
   - Humidity (%)
   - Wind Speed (m/s)
   - Weather Condition
-- Clean Streamlit UI
-- Uses OpenWeatherMap API
+- Clean Streamlit user interface
+- Uses the OpenWeatherMap API
 - Environment variable support using `.env`
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python 3
 - Streamlit
@@ -43,9 +41,9 @@ Users can enter any city name and instantly view its current weather information
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-```
+```text
 Weather-App/
 │
 ├── app.py
@@ -57,19 +55,14 @@ Weather-App/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/weather-app.git
-```
-
-```bash
 cd weather-app
 ```
-
----
 
 ### 2. Create a Virtual Environment
 
@@ -87,15 +80,11 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
----
-
 ### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
-
----
 
 ### 4. Get an OpenWeatherMap API Key
 
@@ -105,9 +94,7 @@ https://openweathermap.org/api
 
 Create an account and generate your free API key.
 
----
-
-### 5. Create a `.env` file
+### 5. Create a `.env` File
 
 ```env
 API_KEY=YOUR_OPENWEATHERMAP_API_KEY
@@ -121,34 +108,36 @@ API_KEY=1234567890abcdef1234567890abcdef
 
 ---
 
-## ▶️ Run the Application
+## Running the Application
+
+Start the Streamlit server using:
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open automatically in your browser.
+The application will automatically open in your default web browser.
 
 ---
 
-## 📌 How It Works
+## How It Works
 
 1. Enter a city name.
-2. Click **Fetch Weather Data**.
-3. The app sends a request to the OpenWeatherMap API.
-4. The weather information is displayed using Streamlit metrics.
+2. Click the **Fetch Weather Data** button.
+3. The application sends a request to the OpenWeatherMap API.
+4. Current weather details are displayed on the screen.
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
-Major libraries used:
+Main libraries used in this project:
 
 - streamlit
 - requests
 - python-dotenv
 
-Install all dependencies using:
+Install all dependencies with:
 
 ```bash
 pip install -r requirements.txt
@@ -156,7 +145,7 @@ pip install -r requirements.txt
 
 ---
 
-## ❗ Error Handling
+## Error Handling
 
 The application handles:
 
@@ -166,53 +155,53 @@ The application handles:
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
-- 🌍 Detect current location
-- 📅 5-Day Weather Forecast
-- 🌙 Dark/Light Mode
-- 🌦️ Weather Icons
-- 📈 Air Quality Index
-- 🌅 Sunrise & Sunset Time
-- ❤️ Favorite Cities
-- 🗺️ Interactive Weather Maps
+- Current location detection
+- Five-day weather forecast
+- Dark and light theme support
+- Weather icons
+- Air Quality Index (AQI)
+- Sunrise and sunset information
+- Favorite cities
+- Interactive weather maps
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome!
+Contributions are welcome.
 
-1. Fork the repository
-2. Create a new branch
+1. Fork the repository.
+2. Create a feature branch.
 
 ```bash
 git checkout -b feature-name
 ```
 
-3. Commit your changes
+3. Commit your changes.
 
 ```bash
 git commit -m "Add new feature"
 ```
 
-4. Push to GitHub
+4. Push your branch.
 
 ```bash
 git push origin feature-name
 ```
 
-5. Open a Pull Request
+5. Open a Pull Request.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Animesh**
 
@@ -220,7 +209,3 @@ This project is licensed under the MIT License.
 - Video Editor
 - Graphic Designer
 - Social Media Manager
-
----
-
-⭐ If you found this project helpful, consider giving it a star on GitHub!
