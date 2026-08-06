@@ -1,59 +1,39 @@
-# MakaBhosraAAG - Weather App
+# Weather App
 
-A simple and responsive weather application built with **Python**, **Streamlit**, and the **OpenWeatherMap API**.
-
-Users can enter any city name and instantly view its current weather information including:
-
-- Temperature
-- Humidity
-- Wind Speed
-- Weather Condition
-
----
-
-## Preview
-
-> Add a screenshot of your application here.
-
----
+A simple and responsive weather application built with **Streamlit** that fetches real-time weather information using the **OpenWeatherMap API**.
 
 ## Features
 
 - Search weather by city name
-- Displays:
-  - Temperature (°C)
-  - Humidity (%)
-  - Wind Speed (m/s)
-  - Weather Condition
-- Clean Streamlit user interface
-- Uses the OpenWeatherMap API
-- Environment variable support using `.env`
-
----
+- Current temperature
+- Weather description
+- Humidity
+- Wind speed
+- Atmospheric pressure
+- Visibility
+- Cloudiness
+- Country information
+- Clean and responsive Streamlit interface
 
 ## Tech Stack
 
 - Python 3
 - Streamlit
 - Requests
-- Python-dotenv
+- python-dotenv
 - OpenWeatherMap API
-
----
 
 ## Project Structure
 
-```text
+```
 Weather-App/
 │
 ├── app.py
-├── requirements.txt
 ├── .env
-├── .gitignore
-└── README.md
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
-
----
 
 ## Installation
 
@@ -64,148 +44,114 @@ git clone https://github.com/yourusername/weather-app.git
 cd weather-app
 ```
 
-### 2. Create a Virtual Environment
+### 2. Create a virtual environment (Recommended)
 
-**Windows**
+#### Windows
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-**Linux / macOS**
+#### Linux / macOS
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Install Dependencies
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Get an OpenWeatherMap API Key
+## Get an OpenWeather API Key
 
-Visit:
+1. Visit https://openweathermap.org/
+2. Create a free account.
+3. Generate an API key.
 
-https://openweathermap.org/api
+## Configure Environment Variables
 
-Create an account and generate your free API key.
-
-### 5. Create a `.env` File
-
-```env
-API_KEY=YOUR_OPENWEATHERMAP_API_KEY
-```
-
-Example:
+Create a `.env` file in the project root.
 
 ```env
-API_KEY=1234567890abcdef1234567890abcdef
+API_KEY=YOUR_OPENWEATHER_API_KEY
 ```
 
----
-
-## Running the Application
-
-Start the Streamlit server using:
+## Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-The application will automatically open in your default web browser.
+The application will open in your browser.
 
----
+Default URL:
 
-## How It Works
-
-1. Enter a city name.
-2. Click the **Fetch Weather Data** button.
-3. The application sends a request to the OpenWeatherMap API.
-4. Current weather details are displayed on the screen.
-
----
-
-## Dependencies
-
-Main libraries used in this project:
-
-- streamlit
-- requests
-- python-dotenv
-
-Install all dependencies with:
-
-```bash
-pip install -r requirements.txt
+```
+http://localhost:8501
 ```
 
----
+## Screenshots
 
-## Error Handling
+You can add screenshots here.
 
-The application handles:
+```
+assets/
+    screenshot.png
+```
 
-- Invalid city names
-- Failed API requests
-- Missing API key
+Example:
 
----
+```markdown
+![Weather App](assets/screenshot.png)
+```
+
+## Requirements
+
+Example `requirements.txt`
+
+```txt
+streamlit
+requests
+python-dotenv
+```
+
+You can also generate it automatically:
+
+```bash
+pip freeze > requirements.txt
+```
+
+## API Used
+
+OpenWeather Current Weather API
+
+Documentation:
+
+https://openweathermap.org/current
 
 ## Future Improvements
 
-- Current location detection
-- Five-day weather forecast
-- Dark and light theme support
-- Weather icons
+- 5-Day Weather Forecast
+- Hourly Forecast
 - Air Quality Index (AQI)
-- Sunrise and sunset information
-- Favorite cities
-- Interactive weather maps
-
----
-
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the repository.
-2. Create a feature branch.
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes.
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push your branch.
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request.
-
----
+- UV Index
+- Sunrise & Sunset
+- Interactive Weather Maps
+- Auto Location Detection
+- Dark/Light Theme Toggle
+- Weather Icons and Animations
+- Search History
 
 ## License
 
 This project is licensed under the MIT License.
 
----
-
 ## Author
 
-**Animesh**
+**Your Name**
 
-- Cyber Security Student
-- Video Editor
-- Graphic Designer
-- Social Media Manager
+GitHub: https://github.com/yourusername
