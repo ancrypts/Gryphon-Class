@@ -1,0 +1,261 @@
+# Student Management System
+
+A simple **Student Management System** built with **React** and **Axios**.
+
+The application allows users to add, view, update, and delete student records through a REST API.
+
+## Features
+
+* Add new students
+* View all students
+* Edit existing student information
+* Delete students
+* REST API integration using Axios
+* Automatic refresh of student data after CRUD operations
+* Simple and clean React interface
+
+## Technologies Used
+
+* **React.js** – Frontend UI
+* **Axios** – HTTP requests
+* **JavaScript (ES6+)**
+* **CSS** – Styling
+* **REST API** – Backend communication
+
+## Project Structure
+
+```text
+student-management-system/
+│
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── public/
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+* Node.js
+* npm
+* A running backend API on `http://localhost:8000`
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repository-url>
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd student-management-system
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Install Axios
+
+If Axios is not already installed:
+
+```bash
+npm install axios
+```
+
+### 5. Start the development server
+
+```bash
+npm run dev
+```
+
+The React application will normally be available at:
+
+```text
+http://localhost:5173
+```
+
+## Backend API
+
+This frontend expects a backend server running at:
+
+```text
+http://localhost:8000
+```
+
+### API Endpoints
+
+| Method   | Endpoint        | Description        |
+| -------- | --------------- | ------------------ |
+| `GET`    | `/students`     | Fetch all students |
+| `POST`   | `/students`     | Add a new student  |
+| `PUT`    | `/students/:id` | Update a student   |
+| `DELETE` | `/students/:id` | Delete a student   |
+
+### Student Object
+
+The application uses the following student structure:
+
+```json
+{
+  "id": "101",
+  "name": "John Doe",
+  "course": "Computer Science"
+}
+```
+
+## Application Flow
+
+### Fetch Students
+
+When the application loads, `useEffect()` calls:
+
+```javascript
+axios.get(BASE_URL + '/students')
+```
+
+The returned student data is stored in the `students` state.
+
+### Add Student
+
+When the form is submitted without an active edit:
+
+```javascript
+axios.post(BASE_URL + '/students', {
+  id,
+  name,
+  course
+})
+```
+
+### Update Student
+
+When editing an existing student:
+
+```javascript
+axios.put(BASE_URL + `/students/${editId}`, {
+  id,
+  name,
+  course
+})
+```
+
+### Delete Student
+
+Clicking the **Delete** button sends:
+
+```javascript
+axios.delete(BASE_URL + `/students/${studentId}`)
+```
+
+After every create, update, or delete operation, the student list is fetched again to display the latest data.
+
+## React State
+
+The application uses React's `useState` hook to manage:
+
+```javascript
+const [id, setId] = useState('')
+const [name, setName] = useState('')
+const [course, setCourse] = useState('')
+const [students, setStudents] = useState([])
+const [editId, setEditId] = useState(null)
+```
+
+| State      | Purpose                                   |
+| ---------- | ----------------------------------------- |
+| `id`       | Stores the student ID                     |
+| `name`     | Stores the student name                   |
+| `course`   | Stores the student's course               |
+| `students` | Stores the list of students               |
+| `editId`   | Tracks the student currently being edited |
+
+## Edit Functionality
+
+Clicking **Edit** loads the selected student's information into the form:
+
+```javascript
+function editStudent(student) {
+  setId(student.id)
+  setName(student.name)
+  setCourse(student.course)
+  setEditId(student.id)
+}
+```
+
+The form button changes from **Submit** to **Update** while editing.
+
+## Delete Functionality
+
+Clicking **Delete** removes the selected student from the backend and refreshes the student list.
+
+## UI Overview
+
+The application contains:
+
+1. Student Management System heading
+2. Student ID input
+3. Student Name input
+4. Student Course input
+5. Submit/Update button
+6. Student data table
+7. Edit button
+8. Delete button
+
+## Important Notes
+
+* The backend must be running on port `8000`.
+* Make sure the backend allows requests from the React development server using CORS.
+* The frontend currently uses a hardcoded API URL:
+
+```javascript
+const BASE_URL = 'http://localhost:8000'
+```
+
+For production, it is recommended to store the API URL in an environment variable.
+
+Example:
+
+```env
+VITE_API_URL=http://localhost:8000
+```
+
+Then:
+
+```javascript
+const BASE_URL = import.meta.env.VITE_API_URL
+```
+
+## Possible Improvements
+
+Future versions could include:
+
+* Form validation
+* Search students
+* Pagination
+* Loading indicators
+* Error handling
+* Confirmation before deleting
+* Responsive design
+* Toast notifications instead of `window.alert()`
+* Environment-based API configuration
+* Authentication and authorization
+
+## License
+
+This project is available for educational and personal use.
+
+---
+
+**Built with React and Axios.**
